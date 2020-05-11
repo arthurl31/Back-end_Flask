@@ -14,7 +14,7 @@
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../Back-end_Flask\templates" />
+        <option value="$MODULE_DIR$/App/views" />
       </list>
     </option>
   </component>
