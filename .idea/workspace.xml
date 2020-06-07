@@ -20,143 +20,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="110b2b5d-a78f-4b18-89cb-d095cc684711" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/clientController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/loginController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/forms/LoginForm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/Flask_WTF-0.14.3.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/Flask_WTF-0.14.3.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/Flask_WTF-0.14.3.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/Flask_WTF-0.14.3.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/Flask_WTF-0.14.3.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/Flask_WTF-0.14.3.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/WTForms-2.3.1.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/WTForms-2.3.1.dist-info/LICENSE.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/WTForms-2.3.1.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/WTForms-2.3.1.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/WTForms-2.3.1.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/WTForms-2.3.1.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/_compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/csrf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/html5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/i18n.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/recaptcha/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/recaptcha/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/recaptcha/validators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/flask_wtf/recaptcha/widgets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/csrf/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/csrf/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/csrf/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/appengine/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/appengine/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/appengine/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/appengine/ndb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/csrf/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/csrf/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/csrf/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/csrf/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/dateutil/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/dateutil/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/django/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/django/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/django/i18n.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/django/orm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/django/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/django/templatetags/wtforms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/i18n/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/i18n/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/i18n/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/sqlalchemy/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/sqlalchemy/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/ext/sqlalchemy/orm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/fields/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/fields/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/fields/html5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/fields/simple.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/i18n.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ar/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ar/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/bg/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/bg/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ca/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ca/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/cy/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/cy/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/de/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/de/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/de_CH/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/de_CH/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/el/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/el/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/en/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/en/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/es/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/es/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/et/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/et/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/fa/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/fa/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/fi/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/fi/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/fr/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/fr/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/he/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/he/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/hu/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/hu/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/it/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/it/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ja/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ja/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ko/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ko/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/nb/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/nb/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/nl/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/nl/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/pl/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/pl/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/pt/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/pt/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ru/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/ru/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/sk/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/sk/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/sv/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/sv/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/tr/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/tr/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/uk/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/uk/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/wtforms.pot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/zh/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/zh/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.mo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/locale/zh_TW/LC_MESSAGES/wtforms.po" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/meta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/validators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/widgets/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/widgets/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/wtforms/widgets/html5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Arthur.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Arthur.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Arthur.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/Adress.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/Client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/Employer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/List_Product_Order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/Order.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/Product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/versions/aa35a3d5f616_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/_exceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/_mysql.cp37-win_amd64.pyd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/connections.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/constants/CLIENT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/constants/CR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/constants/ER.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/constants/FIELD_TYPE.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/constants/FLAG.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/constants/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/converters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/cursors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/release.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/MySQLdb/times.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/mysqlclient-1.4.6.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/mysqlclient-1.4.6.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/mysqlclient-1.4.6.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/mysqlclient-1.4.6.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/mysqlclient-1.4.6.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/mysqlclient-1.4.6.dist-info/top_level.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/2a90b9380745_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/5387cf75f5a9_.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +68,6 @@
       <list>
         <option value="Flask Main" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -192,7 +91,6 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DayLife" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -266,8 +164,7 @@
       <workItem from="1590093258409" duration="632000" />
       <workItem from="1590108103948" duration="6701000" />
       <workItem from="1590614004251" duration="9812000" />
-      <workItem from="1590709965137" duration="5849000" />
-      <workItem from="1591553111421" duration="4631000" />
+      <workItem from="1590709965137" duration="4589000" />
     </task>
     <servers />
   </component>
@@ -302,46 +199,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="399" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590615369937" />
-    <state x="552" y="274" width="878" height="766" key="#xdebugger.evaluate" timestamp="1591557204874">
+    <state x="742" y="274" width="933" height="766" key="#xdebugger.evaluate" timestamp="1590622724723">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="274" width="878" height="766" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1591557204874" />
+    <state x="742" y="274" width="933" height="766" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1590622724723" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590616735391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590616735391" />
-    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1591557641914">
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom" timestamp="1590712876354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591557641914" />
-    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1591557641914">
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590712876354" />
+    <state width="1877" height="305" key="GridCell.Tab.0.center" timestamp="1590712876354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591557641914" />
-    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1591557641914">
+    <state width="1877" height="305" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590712876354" />
+    <state width="1877" height="305" key="GridCell.Tab.0.left" timestamp="1590712876354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591557641914" />
-    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1591557641914">
+    <state width="1877" height="305" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590712876354" />
+    <state width="1877" height="305" key="GridCell.Tab.0.right" timestamp="1590712876354">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591557641914" />
-    <state width="1877" height="253" key="GridCell.Tab.1.bottom" timestamp="1591557641915">
+    <state width="1877" height="305" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590712876354" />
+    <state width="1877" height="195" key="GridCell.Tab.1.bottom" timestamp="1590710861007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591557641915" />
-    <state width="1877" height="253" key="GridCell.Tab.1.center" timestamp="1591557641915">
+    <state width="1877" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590710861007" />
+    <state width="1877" height="195" key="GridCell.Tab.1.center" timestamp="1590710861007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591557641915" />
-    <state width="1877" height="253" key="GridCell.Tab.1.left" timestamp="1591557641914">
+    <state width="1877" height="195" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590710861007" />
+    <state width="1877" height="195" key="GridCell.Tab.1.left" timestamp="1590710861007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591557641914" />
-    <state width="1877" height="253" key="GridCell.Tab.1.right" timestamp="1591557641915">
+    <state width="1877" height="195" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590710861007" />
+    <state width="1877" height="195" key="GridCell.Tab.1.right" timestamp="1590710861007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="253" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591557641915" />
+    <state width="1877" height="195" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590710861007" />
     <state width="196" height="539" key="HiddenNamespacesPopup" timestamp="1590112686927">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -352,7 +249,7 @@
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590615469720" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Back_end_Flask$Back_end_Flask.coverage" NAME="Back-end_Flask Coverage Results" MODIFIED="1591557641902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Back_end_Flask$Back_end_Flask.coverage" NAME="Back-end_Flask Coverage Results" MODIFIED="1590712876345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Back_end_Flask$config.coverage" NAME="config Coverage Results" MODIFIED="1590710374238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>

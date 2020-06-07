@@ -55,7 +55,6 @@ class Employer(db.Model):
     cpf = db.Column(db.String(11), nullable=False)
     birth_date = db.Column(db.Date, nullable=False)
     entry_date = db.Column(db.Date, nullable=False, default=datetime.utcnow())
-    password = db.Column(db.String(255), nullable=False)
     is_active = db.Column(db.Boolean, nullable=False, default=1)
     is_admin = db.Column(db.Boolean, nullable=False, default=0)
     is_super = db.Column(db.Boolean, nullable=False, default=0)
