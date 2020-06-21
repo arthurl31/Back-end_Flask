@@ -4,6 +4,9 @@ from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 
 app = Flask(__name__)
+app.static_folder = 'static'
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+
 app.config.from_object('config')
 
 db = SQLAlchemy(app=app)

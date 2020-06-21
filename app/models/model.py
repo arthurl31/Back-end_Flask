@@ -32,7 +32,7 @@ class Client(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    cpf = db.Column(db.String(11), nullable=False)
+    cpf = db.Column(db.String(20), nullable=False, unique=True)
     birth_date = db.Column(db.Date, nullable=False)
     fk_adress_id = db.Column(db.ForeignKey('adress.id'))
 
@@ -52,8 +52,9 @@ class Employer(db.Model):
     __tablename__ = 'employers'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
-    cpf = db.Column(db.String(11), nullable=False)
+    cpf = db.Column(db.String(20), nullable=False, unique=True)
     birth_date = db.Column(db.Date, nullable=False)
+    password = db.Column(db.String(120), nullable=False)
     entry_date = db.Column(db.Date, nullable=False, default=datetime.utcnow())
     is_active = db.Column(db.Boolean, nullable=False, default=1)
     is_admin = db.Column(db.Boolean, nullable=False, default=0)
@@ -62,10 +63,11 @@ class Employer(db.Model):
 
     adress = db.relationship('Adress', foreign_keys=fk_adress_id)
 
-    def __init__(self, name, cpf, birth_date, adress_id):
+    def __init__(self, name, cpf, birth_date, password, adress_id):
         self.name = name
         self.cpf = cpf
         self.birth_date = birth_date
+        self.password = password
         self.fk_adress_id = adress_id
 
     def __repr__(self):

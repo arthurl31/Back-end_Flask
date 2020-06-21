@@ -1,3 +1,6 @@
+from sqlalchemy.dialects.postgresql.psycopg2 import logger
+from sqlalchemy.exc import SQLAlchemyError
+
 from app.models.model import Employer
 from app import db
 
@@ -9,11 +12,13 @@ def getAll():
         return False
 
 
-def insert_employer(name, cpf, birth_date, adress):
+def insert_employer(name, cpf, birth_date, adress, password):
     try:
-        db.session.add(Employer(name=str(name), cpf=str(cpf), birth_date=birth_date, adress_id=int(adress)))
+        db.session.add(
+            Employer(name=str(name), cpf=str(cpf), birth_date=birth_date, password=password, adress_id=str(adress[0])))
         db.session.commit()
-    except:
+    except SQLAlchemyError as e:
+        logger.error(e.args)
         return False
 
 
@@ -49,5 +54,12 @@ def delete_employer(employer_id):
         db.session.delete(data)
         db.session.commit()
         return True
+    except:
+        return False
+
+
+def get_employer_by_username(cpf):
+    try:
+        return Employer.query.filter_by(cpf=cpf).first()
     except:
         return False

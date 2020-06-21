@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+
+        .main-head {
+            height: 150px;
+            background: #FFF;
+
+        }
+
+        .sidenav {
+            height: 100%;
+            background-color: #000;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+
+        .main {
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .login-form {
+                margin-top: 10%;
+            }
+
+            .register-form {
+                margin-top: 10%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .main {
+                margin-left: 40%;
+            }
+
+            .sidenav {
+                width: 40%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+
+            .login-form {
+                margin-top: 80%;
+            }
+
+            .register-form {
+                margin-top: 20%;
+            }
+        }
+
+
+        .login-main-text {
+            margin-top: 20%;
+            padding: 60px;
+            color: #fff;
+        }
+
+        .login-main-text h2 {
+            font-weight: 300;
+        }
+
+        .btn-black {
+            background-color: #000 !important;
+            color: #fff;
+        }
+    </style>
+    {% block title %}Register{% endblock title %}
+    <div class="sidenav">
+        <div class="login-main-text">
+            <h2>Loja<br> Informatica</h2>
+            <p>Register</p>
+        </div>
+    </div>
+    <div style="margin-top: -250px;" class="main">
+        <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+                <form action="/register" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" placeholder="Name" class="form-control" required>
+                        <label for="cep">CEP</label>
+                        <input type="text" name="cep" id="cep" placeholder="Name" class="form-control" required>
+                        <label for="adress">Adress</label>
+                        <input type="text" name="adress" id="adress" placeholder="Name" class="form-control" required>
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" type="text" class="form-control" placeholder="Username" name="cpf"
+                               required>
+
+                        <label for="bdate">Birth Date</label>
+                        <input type="date" name="bdate" id="bdate" placeholder="Birth Date" class="form-control"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" class="form-control" placeholder="Password"
+                               name="password1" required>
+                        <label for="password2">Repeat-Password</label>
+                        <input id="password2" type="password" class="form-control" placeholder="Repeat Password"
+                               name="password2" required>
+                    </div>
+                    <button type="submit" class="btn btn-black">Register</button>
+                    <button type="submit" onclick="window.location='/login';" class="btn btn-secondary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

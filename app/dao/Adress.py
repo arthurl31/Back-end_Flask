@@ -1,3 +1,5 @@
+from sqlalchemy import func
+
 from app.models.model import Adress
 from app import db
 
