@@ -100,6 +100,15 @@
                         <input id="password" type="password" class="form-control" placeholder="Password"
                                name="password" required>
                     </div>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul style="margin-top: 10px;" class=flashes>
+                                {% for message in messages %}
+                                    <li style="color: red;">{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
                     <button type="submit" class="btn btn-black">Login</button>
                     <button type="submit" onclick="window.location='/register';" class="btn btn-secondary">Register
                     </button>

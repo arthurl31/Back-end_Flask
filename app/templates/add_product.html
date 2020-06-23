@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Adicionar Produto{% endblock title %}
+{% block content %}
+    <style>
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    </style>
+    <div style="margin-top: 100px;" class="container">
+        <form action="/addproduct" method="post">
+            <div class="form-group">
+                <label for="nome_produto">Nome do Produto</label>
+                <input name="nproduto" type="text" class="form-control" id="nome_produto"
+                       placeholder="Insira o nome do Produto" required>
+            </div>
+            <div class="form-group">
+                <label for="valor_produto">Valor do Produto</label>
+                <input name="vproduto" type="number" class="form-control" id="valor_produto"
+                       placeholder="Insira o valor do Produto" required>
+            </div>
+            <div class="form-group">
+                <label for="estoque_produto">Quantidade em Estoque do Produto</label>
+                <input name="eproduto" type="number" class="form-control" id="estoque_produto"
+                       placeholder="Insira o nome do Produto" required>
+            </div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul style="margin-top: 10px;" class=flashes>
+                        {% for message in messages %}
+                            <li style="color: red;">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <button style="width: 100%" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}

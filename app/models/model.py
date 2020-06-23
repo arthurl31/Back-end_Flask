@@ -63,6 +63,21 @@ class Employer(db.Model):
 
     adress = db.relationship('Adress', foreign_keys=fk_adress_id)
 
+    @property
+    def is_authenticated(self):
+        return True
+
+    @property
+    def is_active(self):
+        return True
+
+    @property
+    def is_anonymous(self):
+        return False
+
+    def get_id(self):
+        return str(self.id)
+
     def __init__(self, name, cpf, birth_date, password, adress_id):
         self.name = name
         self.cpf = cpf
@@ -80,6 +95,7 @@ class Product(db.Model):
     product_name = db.Column(db.String(100), nullable=False)
     product_value = db.Column(db.Float, nullable=False)
     available_quantity = db.Column(db.Integer, nullable=False)
+    is_active = db.Column(db.Boolean, nullable=False, default=1)
     add_by = db.Column(db.ForeignKey('employers.id'))
     add_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow())
 
@@ -92,7 +108,7 @@ class Product(db.Model):
         self.add_by = add_by
 
     def __repr__(self):
-        return "Product id: " + self.id
+        return "Product id: " + str(self.id)
 
 
 class Adress(db.Model):

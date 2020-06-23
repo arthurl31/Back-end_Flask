@@ -3,12 +3,108 @@
 <head>
     {% block head %}
         <!--<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
-              id="bootstrap-css">
+        <!--<script src="{{ url_for('static', filename='js/jquery.mask.js') }}"></script> -->
+
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                crossorigin="anonymous"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
         <title>{% block title %}{% endblock %}</title>
     {% endblock %}
+    {% if current_user.is_authenticated %}
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <a style="float: right;" href="/logout">Logout</a>
+                    <h5 class="text-white h4">Loja de<br>&nbsp&nbsp&nbsp&nbsp&nbspInformatica</h5>
+                    <span style="display: flex;" class="text-muted">Olá, {{ current_user.name }} |
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a style="padding: 0 !important; margin-left: 10px;" data-toggle="dropdown"
+                                   class="nav-link dropdown-toggle font-weight-normal p-4" href="#"
+                                   role="button">
+                                    Minha Conta
+                                </a>
+                                <div id="dropped" style="background: #343a40!important;"
+                                     class="dropdown-menu dropdown-menu-center">
+                                    <h6 class="dropdown-header"><small>Minha Conta</small></h6>
+                                    <a href="/logout" style="color: white;"
+                                       class="dropdown-item">Logout</a>
+                                </div>
+                             </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a style="padding: 0 !important; margin-left: 10px;" data-toggle="dropdown"
+                                   class="nav-link dropdown-toggle font-weight-normal p-4" href="#"
+                                   role="button">
+                                    Produtos
+                                </a>
+                                <div id="dropped" style="background: #343a40!important;"
+                                     class="dropdown-menu dropdown-menu-center">
+                                    <h6 class="dropdown-header"><small>Produtos</small></h6>
+                                    <a href="/addproduct" style="color: white;"
+                                       class="dropdown-item">Adicionar Produto</a>
+                                    <a href="/allproducts" style="color: white;" class="dropdown-item">Ver Todos</a>
+                                </div>
+                             </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a style="padding: 0 !important; margin-left: 10px;" data-toggle="dropdown"
+                                   class="nav-link dropdown-toggle font-weight-normal p-4" href="#"
+                                   role="button">
+                                    Pedidos
+                                </a>
+                                <div id="dropped" style="background: #343a40!important;"
+                                     class="dropdown-menu dropdown-menu-center">
+                                    <h6 class="dropdown-header"><small>Pedidos</small></h6>
+                                    <a href="/addorder" style="color: white;"
+                                       class="dropdown-item">Adicionar Pedido</a>
+                                    <a href="/allorders" style="color: white;" class="dropdown-item">Ver Todos</a>
+                                </div>
+                             </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a style="padding: 0 !important; margin-left: 10px;" data-toggle="dropdown"
+                                   class="nav-link dropdown-toggle font-weight-normal p-4" href="#"
+                                   role="button">
+                                    Carrinho
+                                </a>
+                                <div id="dropped" style="background: #343a40!important;"
+                                     class="dropdown-menu dropdown-menu-center">
+                                    <h6 class="dropdown-header"><small>Carrinho</small></h6>
+                                    <a href="/myccart" style="color: white;"
+                                       class="dropdown-item">Carrinho</a>
+                                </div>
+                             </li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
+    {% else %}
+    {% endif %}
 </head>
 <body>
 <div id="content">{% block content %}{% endblock %}</div>

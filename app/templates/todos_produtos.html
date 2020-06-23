@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Todos Produtos{% endblock title %}
+{% block content %}
+    <style>
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    </style>
+    <div style="margin-top: 200px;" class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul style="margin-top: 10px;" class=flashes>
+                    {% for message in messages %}
+                        <li style="color: red;">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <table class="table table-bordered table-dark">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Produto</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Estoque</th>
+                <th scope="col">Ativo</th>
+                <th scope="col">Opções</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                {% for i in context.products %}
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.product_name }}</td>
+                    <td>{{ i.product_value }}</td>
+                    <td>{{ i.available_quantity }}</td>
+                    <td style="{% if i.is_active == True %}color: green;{% else %}color: red;{% endif %}">
+                        {% if i.is_active == True %}SIM{% else %}NÃO{% endif %}</td>
+                    <td style="width: 100px">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-dark dropdown-toggle"
+                                    data-toggle="dropdown">
+                                Options
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a class="dropdown-item" href="/editarproduto/{{ i.id }}">Editar</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/deleteproduct/{{ i.id }}">Deletar</a>
+                                </li>
+                                {% if i.is_active %}
+                                    <li><a class="dropdown-item"
+                                           href="/changestate/{{ i.id }}/False">Desativar</a></li>
+                                {% else %}
+                                    <li><a class="dropdown-item"
+                                           href="/changestate/{{ i.id }}/True">Ativar</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </td>
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

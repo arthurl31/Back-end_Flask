@@ -1,35 +1,45 @@
-from werkzeug.security import check_password_hash
-
-from app import app
-from app.dao import *
+from flask_login import login_user, login_required, logout_user
+from flask_login import current_user
 from app.dao import Adress, Employer
-from app import db
+from app import app, db, login_manager
 from flask import render_template, redirect, request, flash, url_for
 from validate_docbr import CPF
 from datetime import datetime
 import bcrypt
-import time
 
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
-        return render_template('login.html')
+        if not current_user.is_authenticated:
+            return render_template('login.html')
+        else:
+            return redirect(url_for('home'))
     elif request.method == 'POST':
-        cpf = request.form.get('cpf')
-        password = request.form.get('password')
+        if not current_user.is_authenticated:
+            cpf = request.form.get('cpf')
+            password = request.form.get('password')
 
-        user = Employer.get_employer_by_username(cpf)
+            user = Employer.get_employer_by_username(cpf)
 
-        if not user or not check_password_hash(user.password, password):
-            flash('Please check your login details and try again.')
-            return redirect(url_for('login'))
+            if not user or not bcrypt.checkpw(password=password.encode('utf-8'),
+                                              hashed_password=str(user.password).encode('utf-8')):
+                flash('Please check your login details and try again.')
+                return redirect(url_for('login'))
+            else:
+                login_user(user)
+                return redirect('home')
+        else:
+            return redirect('home')
 
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'GET':
-        return render_template('register.html')
+        if not current_user.is_authenticated:
+            return render_template('register.html')
+        else:
+            return redirect(url_for('home'))
     elif request.method == 'POST':
         name = request.form.get('name')
         cep = request.form.get('cep')
@@ -55,3 +65,16 @@ def register():
         else:
             flash('CPF Digitado invalido')
             return redirect('/register')
+
+
+@app.route('/home', methods=['GET'])
+@login_required
+def home():
+    return render_template('home.html')
+
+
+@app.route('/logout', methods=['GET'])
+@login_required
+def logout():
+    logout_user()
+    redirect(url_for('login'))

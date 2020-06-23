@@ -1,8 +1,18 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Arthur">
     <words>
+      <w>addorder</w>
+      <w>addproduct</w>
+      <w>addtocard</w>
       <w>adress</w>
       <w>adresses</w>
+      <w>allproducts</w>
+      <w>changestate</w>
+      <w>deleteproduct</w>
+      <w>disableproduct</w>
+      <w>editarproduto</w>
+      <w>enableproduct</w>
+      <w>myccart</w>
       <w>sqlalchemy</w>
     </words>
   </dictionary>

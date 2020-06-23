@@ -2,7 +2,12 @@ from sqlalchemy.dialects.postgresql.psycopg2 import logger
 from sqlalchemy.exc import SQLAlchemyError
 
 from app.models.model import Employer
-from app import db
+from app import db, login_manager
+
+
+@login_manager.user_loader
+def load_user(id):
+    return Employer.query.filter_by(id=id).first()
 
 
 def getAll():
