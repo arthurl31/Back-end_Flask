@@ -28,7 +28,7 @@ def login():
                 return redirect(url_for('login'))
             else:
                 login_user(user)
-                return redirect('home')
+                return redirect(url_for('home'))
         else:
             return redirect('home')
 
@@ -77,4 +77,4 @@ def home():
 @login_required
 def logout():
     logout_user()
-    redirect(url_for('login'))
+    return redirect(url_for('login'))

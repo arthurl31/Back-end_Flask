@@ -20,25 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="110b2b5d-a78f-4b18-89cb-d095cc684711" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/cartController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/orderController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/productController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/add_product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/editar_produto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/generate_order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/mycart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/todos_produtos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/versions/92b0937dbde2_.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/clientController.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/add_client.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/all_clientes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/versions/6041d08f0f23_.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Arthur.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Arthur.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/employerController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/Employer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/Employer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dao/Product.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/Product.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/cartController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/cartController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/employerController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/employerController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/orderController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/orderController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/Adress.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/Adress.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dao/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/dao/Client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/generate_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/generate_order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/mycart.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/mycart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/todos_produtos.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/todos_produtos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +75,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DayLife" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
@@ -155,7 +156,8 @@
       <workItem from="1590709965137" duration="4589000" />
       <workItem from="1591836556449" duration="27000" />
       <workItem from="1592754197197" duration="15759000" />
-      <workItem from="1592831546109" duration="23905000" />
+      <workItem from="1592831546109" duration="24095000" />
+      <workItem from="1592919954429" duration="18554000" />
     </task>
     <servers />
   </component>
@@ -190,46 +192,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="399" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590615369937" />
-    <state x="598" y="131" width="1297" height="766" key="#xdebugger.evaluate" timestamp="1592872722489">
+    <state x="623" y="274" width="1297" height="766" key="#xdebugger.evaluate" timestamp="1592951725774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="598" y="131" width="1297" height="766" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1592872722489" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592858617064">
+    <state x="623" y="274" width="1297" height="766" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1592951725774" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1592939875152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592858617064" />
-    <state width="1877" height="265" key="GridCell.Tab.0.bottom" timestamp="1592873074497">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592939875152" />
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom" timestamp="1592962882932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592873074497" />
-    <state width="1877" height="265" key="GridCell.Tab.0.center" timestamp="1592873074497">
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592962882932" />
+    <state width="1877" height="238" key="GridCell.Tab.0.center" timestamp="1592962882932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592873074497" />
-    <state width="1877" height="265" key="GridCell.Tab.0.left" timestamp="1592873074496">
+    <state width="1877" height="238" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592962882932" />
+    <state width="1877" height="238" key="GridCell.Tab.0.left" timestamp="1592962882932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592873074496" />
-    <state width="1877" height="265" key="GridCell.Tab.0.right" timestamp="1592873074497">
+    <state width="1877" height="238" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592962882932" />
+    <state width="1877" height="238" key="GridCell.Tab.0.right" timestamp="1592962882932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592873074497" />
-    <state width="1877" height="265" key="GridCell.Tab.1.bottom" timestamp="1592872734388">
+    <state width="1877" height="238" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592962882932" />
+    <state width="1877" height="238" key="GridCell.Tab.1.bottom" timestamp="1592962882932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592872734388" />
-    <state width="1877" height="265" key="GridCell.Tab.1.center" timestamp="1592872734388">
+    <state width="1877" height="238" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592962882932" />
+    <state width="1877" height="238" key="GridCell.Tab.1.center" timestamp="1592962882932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592872734388" />
-    <state width="1877" height="265" key="GridCell.Tab.1.left" timestamp="1592872734388">
+    <state width="1877" height="238" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592962882932" />
+    <state width="1877" height="238" key="GridCell.Tab.1.left" timestamp="1592962882932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592872734388" />
-    <state width="1877" height="265" key="GridCell.Tab.1.right" timestamp="1592872734388">
+    <state width="1877" height="238" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592962882932" />
+    <state width="1877" height="238" key="GridCell.Tab.1.right" timestamp="1592962882932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="265" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592872734388" />
+    <state width="1877" height="238" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592962882932" />
     <state width="196" height="539" key="HiddenNamespacesPopup" timestamp="1590112686927">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -238,17 +240,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590615469720" />
-    <state x="668" y="239" width="583" height="562" key="find.popup" timestamp="1592778516011">
+    <state x="668" y="239" width="583" height="562" key="find.popup" timestamp="1592946624528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="239" width="583" height="562" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592778516011" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1592863674691">
+    <state x="668" y="239" width="583" height="562" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592946624528" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1592952098322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592863674691" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592952098322" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Back_end_Flask$Back_end_Flask.coverage" NAME="Back-end_Flask Coverage Results" MODIFIED="1592873074491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Back_end_Flask$Back_end_Flask.coverage" NAME="Back-end_Flask Coverage Results" MODIFIED="1592952201341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Back_end_Flask$config.coverage" NAME="config Coverage Results" MODIFIED="1590710374238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>

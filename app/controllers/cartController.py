@@ -1,33 +1,63 @@
 from flask import render_template, redirect, request, flash, url_for, session
 from flask_login import current_user
 from flask_login import login_required
-
+from validate_docbr import CPF
 from app import app
 from app.dao import Order, Product
 
 
-@app.route('/addtocard/<id>', methods=['GET', 'POST'])
+@app.route('/addtocard', methods=['POST'])
 @login_required
-def addtocard(id):
-    product = Product.getById(id)
+def addtocard():
+    product_id = request.form.get('product_id')
+    product = Product.getById(int(product_id))
+    quantity = request.form.get('quantity')
+    if not product.is_active:
+        flash('Produto não disponivel')
+        return redirect('allproducts')
+    if not product:
+        flash('Produto não existe')
+        return redirect('home')
+    elif not int(quantity) or int(quantity) <= 0:
+        flash('Quantidade deve ser maior que 0')
+        return redirect('home')
 
     if 'cart' in session:
-        if not any(product.product_name in d for d in session['cart']):
-            session['cart'].append({str(product.name): 1})
-    elif any(product.name in d for d in session['cart']):
-        for d in session['cart']:
-            d.update((k, request.form.get('quantity')) for k, v in d.items() if k == product.product_name)
+        if not any(product.id in d for d in session['cart']):
+            session['cart'].append({product.id: quantity})
+            session.modified = True
+
+        elif any(product.id in d for d in session['cart']):
+            for d in session['cart']:
+                d.update((k, quantity) for k, v in d.items() if k == product.id)
+                session.modified = True
     else:
-        session['cart'] = [{product.name: 1}]
+        session['cart'] = [{product.id: quantity}]
+        session.modified = True
 
-    return redirect(url_for('addorder'))
+    return redirect(url_for('myccart'))
 
 
-@app.route('/myccart', methods=['GET', 'POST'])
+@app.route('/mycart', methods=['GET', 'POST'])
 @login_required
-def myccart():
+def mycart():
+    return render_template('mycart.html', cart={'products': session['cart']})
+
+
+@app.route("/removefromcart/<int:id>", methods=['GET', 'POST'])
+@login_required
+def removefromcart(id):
     if 'cart' in session:
-        return render_template('mycart.html', cart={'products': session['cart']})
+        for i in session['cart']:
+            for j in i:
+                if j == str(id):
+                    session['cart'].remove(i)
+                    session.modified = True
+                    flash('Produto removido com sucesso do carrinho')
+                    return redirect(url_for('myccart'))
+
+        flash('Produto não encontrado no carinho')
+        return redirect(url_for('myccart'))
     else:
-        session['cart'] = {}
-        return render_template('mycart.html', cart={'products': session['cart']})
+        flash('Produto não encontrado no carinho')
+        return redirect(url_for('myccart'))

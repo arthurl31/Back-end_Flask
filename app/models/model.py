@@ -34,7 +34,7 @@ class Client(db.Model):
     name = db.Column(db.String(100), nullable=False)
     cpf = db.Column(db.String(20), nullable=False, unique=True)
     birth_date = db.Column(db.Date, nullable=False)
-    fk_adress_id = db.Column(db.ForeignKey('adress.id'))
+    fk_adress_id = db.Column(db.ForeignKey('adress.id', ondelete='CASCADE'))
 
     adress = db.relationship('Adress', foreign_keys=fk_adress_id)
 

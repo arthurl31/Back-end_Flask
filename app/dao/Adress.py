@@ -1,3 +1,5 @@
+from sqlalchemy.dialects.postgresql.psycopg2 import logger
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy import func
 
 from app.models.model import Adress
@@ -45,5 +47,6 @@ def delete_adress(adress_id):
         db.session.delete(data)
         db.session.commit()
         return True
-    except:
+    except SQLAlchemyError as e:
+        logger.error(e.args)
         return False

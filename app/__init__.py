@@ -28,4 +28,4 @@ def index():
     return redirect('login')
 
 
-from app.controllers import employerController, productController, orderController, cartController
+from app.controllers import employerController, productController, orderController, cartController, clientController

@@ -18,31 +18,12 @@
                 </ul>
             {% endif %}
         {% endwith %}
-        <table class="table table-bordered table-dark">
-            <thead>
-            <tr>
-                <th scope="col">Produto</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Estoque</th>
-                <th scope="col">Carrinho</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                {% for i in context.products %}
-                    {% if i.is_active %}
-                        <td>{{ i.product_name }}</td>
-                        <td>{{ i.product_value }}</td>
-                        <td>{{ i.available_quantity }}</td>
-                        <td style="width: 100px">
-                            <div class="btn-group">
-                                <a href="/addtocard/{{ i.id }}">Adicionar</a>
-                            </div>
-                        </td>
-                    {% endif %}
-                {% endfor %}
-            </tr>
-            </tbody>
-        </table>
+        <form method="POST" action="/addtocard">
+            <label for="pid">Digitite o ID do Produto para adicionar ao carrinho!</label>
+            <input style="width: 40%;" id="pid" type="number" name="product_id" class="form-control">
+            <label for="quantity">Quantidade</label>
+            <input style="width: 40%;" id="quantity" type="number" name="quantity" class="form-control">
+            <button style="width: 40%; margin-top: 30px;" type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
     </div>
 {% endblock %}

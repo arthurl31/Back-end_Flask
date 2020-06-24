@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Adicionar Cliente{% endblock title %}
+{% block content %}
+    <style>
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    </style>
+    <div style="margin-top: 100px;" class="container">
+        <form action="/addclient" method="post">
+            <div class="form-group">
+                <label for="nome_cliente">Nome do Cliente</label>
+                <input name="ncliente" type="text" class="form-control" id="nome_cliente"
+                       placeholder="Insira o nome do Cliente" required>
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input name="cpf" type="text" class="form-control" id="cpf"
+                       placeholder="Insira CPF do Cliente" required>
+            </div>
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" placeholder="CEP" class="form-control" required>
+            <label for="adress">Adress</label>
+            <input type="text" name="adress" id="adress" placeholder="Adress" class="form-control" required>
+            <div class="form-group">
+                <label for="bdate">Birth Date</label>
+                <input type="date" name="bdate" id="bdate" placeholder="Birth Date" class="form-control"
+                       required>
+            </div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul style="margin-top: 10px;" class=flashes>
+                        {% for message in messages %}
+                            <li style="color: red;">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <button style="width: 100%" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}
