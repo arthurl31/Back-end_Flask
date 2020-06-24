@@ -16,6 +16,24 @@
             text-align: center;
             padding: 10px 0px 12px;
             border-radius: 30px;
+            background: #4028ca;
+            width: 270px;
+            font-family: "Varela Round", sans-serif, monospace;
+            font-size: 1.15em;
+            color: white;
+            transition: all .3s ease;
+            text-decoration: none;
+        }
+
+        #emp {
+            border: none;
+            cursor: pointer;
+            margin: 0 auto;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            padding: 10px 0px 12px;
+            border-radius: 30px;
             background: #ed4c58;
             width: 270px;
             font-family: "Varela Round", sans-serif, monospace;
@@ -26,6 +44,10 @@
         }
 
         #end:hover {
+            transform: scale(1.05);
+        }
+
+        #emp:hover {
             transform: scale(1.05);
         }
     </style>
@@ -66,6 +88,7 @@
                 </tbody>
             </table>
             <a data-toggle="modal" data-target="#exampleModal" id="end">Finalizar Pedido</a>
+            <a href="/emptycart" id="emp">Esvaziar Carrinho</a>
         {% else %}
             <h3 style="text-align: center; color: #343a40; font-weight: bold;">Seu Carrinho está Vazio!</h3>
         {% endif %}

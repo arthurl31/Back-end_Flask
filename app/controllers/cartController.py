@@ -17,10 +17,10 @@ def addtocard():
         return redirect('allproducts')
     if not product:
         flash('Produto não existe')
-        return redirect('home')
+        return redirect(url_for('allproducts'))
     elif not int(quantity) or int(quantity) <= 0:
         flash('Quantidade deve ser maior que 0')
-        return redirect('home')
+        return redirect(url_for('addorder'))
 
     if 'cart' in session:
         if not any(product.id in d for d in session['cart']):
@@ -35,13 +35,14 @@ def addtocard():
         session['cart'] = [{product.id: quantity}]
         session.modified = True
 
-    return redirect(url_for('myccart'))
+    return redirect(url_for('mycart'))
 
 
 @app.route('/mycart', methods=['GET', 'POST'])
 @login_required
 def mycart():
-    return render_template('mycart.html', cart={'products': session['cart']})
+    return render_template('mycart.html',
+                           cart={'products': session['cart']} if 'cart' in session else {'products': None})
 
 
 @app.route("/removefromcart/<int:id>", methods=['GET', 'POST'])
@@ -54,10 +55,26 @@ def removefromcart(id):
                     session['cart'].remove(i)
                     session.modified = True
                     flash('Produto removido com sucesso do carrinho')
-                    return redirect(url_for('myccart'))
+                    return redirect(url_for('mycart'))
 
         flash('Produto não encontrado no carinho')
-        return redirect(url_for('myccart'))
+        return redirect(url_for('mycart'))
     else:
         flash('Produto não encontrado no carinho')
-        return redirect(url_for('myccart'))
+        return redirect(url_for('mycart'))
+
+
+@app.route('/emptycart', methods=['GET'])
+@login_required
+def emptycart():
+    if 'cart' in session:
+        if len(session['cart']) != 0:
+            session['cart'].clear()
+            session.modified = True
+            flash('Carrinho esvaziado com sucesso!')
+            return redirect(url_for('mycart'))
+        else:
+            flash('Carrinho já está vazio')
+            return redirect(url_for('mycart'))
+    else:
+        return redirect(url_for('home'))

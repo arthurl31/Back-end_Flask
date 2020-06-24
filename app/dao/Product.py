@@ -47,6 +47,18 @@ def update_product(id_product, name_product, value, quantity, add_by):
         return False
 
 
+def update_product_quantity(id_product, quantity):
+    try:
+        data = Product.query.get(int(id_product))
+        data.available_quantity = int(quantity)
+        db.session.add(data)
+        db.session.commit()
+        return True
+    except SQLAlchemyError as e:
+        logger.error(e.args)
+        return False
+
+
 def delete_product(id_product):
     try:
         data = Product.query.get(int(id_product))

@@ -8,13 +8,17 @@
       <w>adress</w>
       <w>adresses</w>
       <w>allclientes</w>
+      <w>allorders</w>
       <w>allproducts</w>
       <w>bdate</w>
+      <w>changeorderstate</w>
       <w>changestate</w>
       <w>deleteclient</w>
+      <w>deleteorder</w>
       <w>deleteproduct</w>
       <w>disableproduct</w>
       <w>editarproduto</w>
+      <w>emptycart</w>
       <w>enableproduct</w>
       <w>endorder</w>
       <w>mycart</w>

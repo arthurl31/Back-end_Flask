@@ -21,7 +21,7 @@ def addproduct():
             return redirect("/addproduct")
         Product.insert_product(name_product=nome_produto, value=valor_produto, quantity=estoque_produto, add_by=add_by)
         flash('Produto adicionado com sucesso!')
-        return redirect('home')
+        return redirect(url_for('allproducts'))
 
 
 @app.route("/allproducts", methods=['GET', 'POST'])

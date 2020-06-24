@@ -1,17 +1,19 @@
-from app.models.model import Product_Order as l
+from app.models.model import Product_Order
 from app import db
+from sqlalchemy.dialects.postgresql.psycopg2 import logger
+from sqlalchemy.exc import SQLAlchemyError
 
 
 def getAll():
     try:
-        return l.query.all()
+        return Product_Order.query.all()
     except:
         return False
 
 
 def insert_order(product_id, order_id):
     try:
-        db.session.add(Product_Order(fk_product_id=int(product_id), fk_order_id=int(order_id)))
+        db.session.add(Product_Order(order_id=int(order_id), product_id=int(product_id)))
         db.session.commit()
         return db.session.query(db.func.max(Product_Order.id)).first()
     except:
@@ -27,9 +29,10 @@ def getById(order_id):
 
 def delete_order(order_id):
     try:
-        data = Product_Order.query.get(int(order_id))
+        data = Product_Order.query.filter(Product_Order.fk_order_id == int(order_id)).first()
         db.session.delete(data)
         db.session.commit()
         return True
-    except:
+    except SQLAlchemyError as e:
+        logger.error(e.args)
         return False

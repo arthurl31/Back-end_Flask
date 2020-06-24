@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Todos Pedidos{% endblock title %}
+{% block content %}
+    <style>
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    </style>
+    <div style="margin-top: 200px;" class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul style="margin-top: 10px;" class=flashes>
+                    {% for message in messages %}
+                        <li style="color: red;">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <table class="table table-bordered table-dark">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Produto</th>
+                <th scope="col">Valor Total</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Funcionario</th>
+                <th scope="col">Ativo</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in context.orders %}
+                <tr>
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.product.product_name }}</td>
+                    <td>{{ i.order.total_value }}</td>
+                    <td>{{ i.product.client.cpf }}</td>
+                    <td>{{ i.order.employer.name }}</td>
+                    <td style="{% if i.order.status == True %}color: green;{% else %}color: red;{% endif %}">
+                        {% if i.order.status == True %}SIM{% else %}NÃO{% endif %}</td>
+                    <td style="width: 100px">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-dark dropdown-toggle"
+                                    data-toggle="dropdown">
+                                Options
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a class="dropdown-item" href="/editarproduto/{{ i.order.id }}">Editar</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/deleteorder/{{ i.order.id }}">Deletar</a>
+                                </li>
+                                {% if i.order.status %}
+                                    <li><a class="dropdown-item"
+                                           href="/changeorderstate/{{ i.order.id }}/False">Desativar</a></li>
+                                {% else %}
+                                    <li><a class="dropdown-item"
+                                           href="/changeorderstate/{{ i.order.id }}/True">Ativar</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
