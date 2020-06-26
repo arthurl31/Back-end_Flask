@@ -25,7 +25,6 @@
                 <th scope="col">Nome Cliente</th>
                 <th scope="col">CPF</th>
                 <th scope="col">Data Nascimento</th>
-                <th scope="col">Options</th>
             </tr>
             </thead>
             <tbody>
@@ -35,21 +34,6 @@
                     <td>{{ i.name }}</td>
                     <td>{{ i.cpf }}</td>
                     <td>{{ i.birth_date }}</td>
-                    <td style="width: 100px">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-dark dropdown-toggle"
-                                    data-toggle="dropdown">
-                                Options
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a class="dropdown-item" href="/editclient/{{ i.id }}">Editar</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/deleteclient/{{ i.id }}">Deletar</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
                 </tr>
             {% endfor %}
 

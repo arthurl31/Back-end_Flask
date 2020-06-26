@@ -20,7 +20,7 @@ def addorder():
 def endorder():
     if 'cart' in session:
         cpf_validator = CPF()
-        client_cpf = request.form.get('cpf')
+        client_cpf = request.form.get('cpf').replace('-', '').replace('.', '')
         notes = request.form.get('notes')
         if not cpf_validator.validate(client_cpf):
             flash('CPF Invalido!')
@@ -39,7 +39,8 @@ def endorder():
 
             session['cart'].clear()
             session.modified = True
-            return redirect(url_for('home'))
+            flash('Pedido Finalizado com sucesso!')
+            return redirect(url_for('allorders')    )
             # create relationship
         else:
             flash('CPF do Cliente não encontrado!')

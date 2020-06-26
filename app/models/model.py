@@ -38,14 +38,14 @@ class Client(db.Model):
 
     adress = db.relationship('Adress', foreign_keys=fk_adress_id)
 
+    def __repr__(self):
+        return "Client Name: " + str(self.name)
+
     def __init__(self, name, cpf, birth_date, adress_id):
         self.name = name
         self.cpf = cpf
         self.birth_date = birth_date
         self.fk_adress_id = adress_id
-
-    def __repr__(self):
-        return "Client Name: " + self.name
 
 
 class Employer(db.Model):
@@ -59,7 +59,7 @@ class Employer(db.Model):
     is_active = db.Column(db.Boolean, nullable=False, default=1)
     is_admin = db.Column(db.Boolean, nullable=False, default=0)
     is_super = db.Column(db.Boolean, nullable=False, default=0)
-    fk_adress_id = db.Column(db.ForeignKey('adress.id'))
+    fk_adress_id = db.Column(db.ForeignKey('adress.id', ondelete='CASCADE'))
 
     adress = db.relationship('Adress', foreign_keys=fk_adress_id)
 

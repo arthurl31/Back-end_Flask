@@ -12,7 +12,7 @@ def addproduct():
     if request.method == 'GET':
         return render_template('add_product.html')
     else:
-        valor_produto = request.form.get('vproduto')
+        valor_produto = request.form.get('vproduto').replace(',','.')
         nome_produto = request.form.get('nproduto')
         add_by = current_user.id
         estoque_produto = request.form.get('eproduto')

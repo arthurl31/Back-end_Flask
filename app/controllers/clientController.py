@@ -16,7 +16,7 @@ def addclient():
         name = request.form.get('ncliente')
         cep = request.form.get('cep')
         adress = request.form.get('adress')
-        cpf = request.form.get('cpf')
+        cpf = request.form.get('cpf').replace('-', '').replace('.', '')
         bdate = request.form.get('bdate')
         cpf_validator = CPF()
 
@@ -42,9 +42,3 @@ def allclientes():
     return render_template('all_clientes.html', context={'clients': Client.getAll()})
 
 
-@app.route('/deleteclient/<int:id>', methods=['GET'])
-@login_required
-def deleteclient(id):
-    Client.delete_client(int(id))
-    flash('Cliente ' + str(id) + ' Deletado com Sucesso')
-    return redirect(url_for('allclientes'))

@@ -14,9 +14,12 @@ def addtocard():
     quantity = request.form.get('quantity')
     if not product.is_active:
         flash('Produto não disponivel')
-        return redirect('allproducts')
+        return redirect(url_for('allproducts'))
     if not product:
         flash('Produto não existe')
+        return redirect(url_for('allproducts'))
+    if int(product.available_quantity) < int(quantity):
+        flash('Quantidade deve ser maior que o estoque!')
         return redirect(url_for('allproducts'))
     elif not int(quantity) or int(quantity) <= 0:
         flash('Quantidade deve ser maior que 0')

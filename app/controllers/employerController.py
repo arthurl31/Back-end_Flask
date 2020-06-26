@@ -17,7 +17,7 @@ def login():
             return redirect(url_for('home'))
     elif request.method == 'POST':
         if not current_user.is_authenticated:
-            cpf = request.form.get('cpf')
+            cpf = request.form.get('cpf').replace('-', '').replace('.', '')
             password = request.form.get('password')
 
             user = Employer.get_employer_by_username(cpf)
@@ -44,13 +44,17 @@ def register():
         name = request.form.get('name')
         cep = request.form.get('cep')
         adress = request.form.get('adress')
-        cpf = request.form.get('cpf')
+        cpf = request.form.get('cpf').replace('-', '').replace('.', '')
         bdate = request.form.get('bdate')
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
         cpf_validator = CPF()
 
         if cpf_validator.validate(cpf):
+            user = Employer.get_employer_by_username(cpf)
+            if user:
+                flash('CPF Já cadastrado no sistema!')
+                return redirect(url_for('register'))
             bdate = datetime.strptime(bdate, '%Y-%m-%d')
             adress_id = Adress.insert_adress(name=adress, cep=cep)
 
@@ -59,7 +63,9 @@ def register():
                 return redirect('/register')
             else:
                 hashed_pwd = bcrypt.hashpw(password=password1.encode('utf-8'), salt=bcrypt.gensalt())
-                Employer.insert_employer(name=name, cpf=cpf, birth_date=bdate, adress=adress_id, password=hashed_pwd)
+                Employer.insert_employer(name=name, cpf=cpf.replace('-', '').replace('.', ''), birth_date=bdate,
+                                         adress=adress_id,
+                                         password=hashed_pwd)
                 flash('Funcionario cadastrado com sucesso!')
                 return redirect('/login')
         else:
