@@ -40,7 +40,7 @@ def endorder():
             session['cart'].clear()
             session.modified = True
             flash('Pedido Finalizado com sucesso!')
-            return redirect(url_for('allorders')    )
+            return redirect(url_for('allorders'))
             # create relationship
         else:
             flash('CPF do Cliente não encontrado!')

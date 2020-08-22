@@ -3,7 +3,7 @@ from flask_login import current_user
 from flask_login import login_required
 
 from app import app
-from app.dao import Product
+from app.dao import Product, List_Product_Order
 
 
 @app.route("/addproduct", methods=['GET', 'POST'])
@@ -12,7 +12,7 @@ def addproduct():
     if request.method == 'GET':
         return render_template('add_product.html')
     else:
-        valor_produto = request.form.get('vproduto').replace(',','.')
+        valor_produto = request.form.get('vproduto').replace(',', '.')
         nome_produto = request.form.get('nproduto')
         add_by = current_user.id
         estoque_produto = request.form.get('eproduto')

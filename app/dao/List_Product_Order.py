@@ -36,3 +36,12 @@ def delete_order(order_id):
     except SQLAlchemyError as e:
         logger.error(e.args)
         return False
+
+
+def get_order_by_product(product_id):
+    try:
+        data = Product_Order.query.filter(Product_Order.fk_product_id == int(product_id)).all()
+        return data
+    except SQLAlchemyError as e:
+        logger.error(e.args)
+        return False
