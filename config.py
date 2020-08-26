@@ -1,4 +1,4 @@
 DEBUG = True
 
-SQLALCHEMY_DATABASE_URI = 'mysql://Luiz:y7dbvp32@localhost/backend'
+SQLALCHEMY_DATABASE_URI = 'mysql://*:*@127.0.0.1/*'
 SQLALCHEMY_TRACK_MODIFICATIONS = True

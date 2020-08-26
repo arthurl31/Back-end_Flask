@@ -58,7 +58,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../playlist_migration" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -149,6 +149,7 @@
       <workItem from="1593552358249" duration="4495000" />
       <workItem from="1598048618215" duration="83000" />
       <workItem from="1598052514146" duration="1363000" />
+      <workItem from="1598106334553" duration="42000" />
     </task>
     <servers />
   </component>
@@ -191,10 +192,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593552465435" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598048716077">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1598106389478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598048716077" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598106389478" />
     <state width="1877" height="165" key="GridCell.Tab.0.bottom" timestamp="1593555264658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
